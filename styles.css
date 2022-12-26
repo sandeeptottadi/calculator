@@ -138,10 +138,6 @@ body {
     flex-direction: column;
   }
 
-.btn {
-   background-color: #7FFFD4;
-}
-
   .ans-animate::after {
     content: "";
     position: absolute;
@@ -182,6 +178,10 @@ body {
     padding: 15px;
     border-radius: 8px;
     box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
+}
+
+.btn {
+   color: #7FFFD4;
 }
 
   .row {

@@ -178,13 +178,11 @@ body {
     border-radius: 8px;
     box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
 }
-
-.btn {
-   color : red;
-}
-
 .n-btn {
   color: white;
+}
+.btn {
+   color : red;
 }
 
   .row {

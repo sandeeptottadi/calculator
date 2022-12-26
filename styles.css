@@ -173,7 +173,6 @@ body {
     background-color: #333;
     cursor: pointer;
     font-size: 24px;
-    color: white;
     font-family: 'Courier New', Courier, monospace;
     padding: 15px;
     border-radius: 8px;
@@ -182,6 +181,10 @@ body {
 
 .btn {
    color: #333;
+}
+
+.n-btn {
+  color: white;
 }
 
   .row {

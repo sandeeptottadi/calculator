@@ -1,0 +1,193 @@
+body {
+    background-color: black;
+    position: relative;
+    margin: 0px;
+    height: 100vh;
+    perspective: 300px;
+    perspective-origin: 50% calc(50%);
+    transform-origin: center;
+  }
+  
+  .floor {
+    position: absolute;
+    height: 500px;
+    width: 100%;
+    left: 50%;
+    top: 60%;
+    animation: floor 20s infinite linear;
+    transform: translate(-50%, -50%) rotateX(90deg);
+    background-image: radial-gradient(#0000, #000),
+      repeating-conic-gradient(from 45deg, #111 0deg 90deg, #222 90deg 180deg);
+    background-size: 100%, 25px 25px;
+  }
+  .cube {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%) translateZ(-300px);
+    height: 550px;
+    width: 400px;
+    animation: cube-rotating 5s linear;
+    perspective: 1500em;
+    transform-style: preserve-3d;
+    box-shadow: rgba(172, 165, 165, 0.15) 0px 48px 100px 0px;
+    perspective-origin: 50% calc(50%);
+    transform-origin: center;
+  }
+  .left,
+  .right,
+  .front,
+  .back,
+  .top {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(80, 80, 80, 0.2);
+    box-shadow: 0px 0px 10px black;
+    border: 3px black solid;
+    bottom: -1%;
+    border-radius: 9px;
+    box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
+    transform-origin: center;
+  }
+  .front {
+    transform: translateZ(15px);
+  }
+  .right {
+    right: -3.5%;
+    width: 30px;
+    transform: rotateY(90deg);
+    background: rgba(92, 92, 92, 0.2);
+  }
+  .left {
+    left: -3.5%;
+    width: 30px;
+    transform: rotateY(90deg);
+    background: rgba(92, 92, 92, 0.2);
+  }
+  .back {
+    transform: translateZ(-15px);
+    background-color: rgba(82, 82, 82, 0.2);
+  }
+  .top {
+    position: absolute;
+    left: 0%;
+    top: 0px;
+    animation: top 1.9s infinite linear;
+    height: 100px;
+    width: 100px;
+    background-color: rgba(68, 68, 68, 0.5);
+    transform: translateY(-50%) rotateX(90deg);
+    box-shadow: 0px 0px 10px black;
+  }
+
+
+  .container {
+    height: 100%;
+    width: 100%;
+  }
+
+  .display {
+    position: relative;
+    color: white;
+    font-family: monospace;
+    margin: auto;
+    margin-top: 40px;
+    height: 70px;
+    width: 80%;
+    padding: 10px;
+    background-color: rgba(68, 68, 68, 0.9);
+    border-radius: 8px;
+  }
+
+  .ans {
+    position: relative;
+    padding-right: 5px;
+    height: 50%;
+    text-align: right;
+    word-spacing: 2;
+    font-size: 30px;
+    overflow: scroll;
+  }
+
+  .dis {
+    font-size: 24px;
+    padding-right: 5px;
+    position: relative;
+    height: 50%;
+    text-align: right;
+    overflow: scroll;
+  }
+
+  .ans::-webkit-scrollbar {
+    height: 0px;
+    width: 0px;
+  }
+
+  .dis::-webkit-scrollbar {
+    height: 0px;
+    width: 0px;
+  }
+
+
+  .buttons {
+    width: 90%;
+    margin: auto;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .ans-animate::after {
+    content: "";
+    position: absolute;
+    right: 2px;
+    height: 100%;
+    width: 3px;
+    background-color: white;
+    animation: blink 1s infinite ease-in-out;
+    z-index: 3;
+  }
+
+.dis-animate::after {
+    content: "";
+    position: absolute;
+    right: 2px;
+    height: 100%;
+    width: 3px;
+    background-color: white;
+    animation: blink 1s infinite ease-in-out;
+    z-index: 3;
+  }
+
+  @keyframes blink {
+    40% {
+        background-color: transparent;
+    }
+    80% {
+        background-color: white;
+    }
+  }
+
+.button {
+    background-color: #333;
+    cursor: pointer;
+    font-size: 24px;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
+}
+
+  .row {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+   @keyframes cube-rotating {
+    from {
+    transform: rotateY(180deg) translate(50%, -50%);
+  }
+} 
